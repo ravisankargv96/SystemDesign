@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 321.5
+    "width": 321.5,
+    "collapsed": true
   },
   "right": {
     "id": "a7f0f3705f39d2c2",
@@ -170,10 +171,23 @@
   },
   "active": "3b53ab90de2d42a1",
   "lastOpenFiles": [
-    "LowLevelDesign/ReadMe.md",
+    "LowLevelDesign/Diagrams/DesignAmazon/Unconfirmed 496080.crdownload",
+    "LowLevelDesign/Diagrams/DesignAmazon/DesignAmazon.drawio.crswap",
+    "LowLevelDesign/Diagrams/DesignAmazon/DesignAmazon.drawio",
+    "LowLevelDesign/Diagrams/DesignAmazon",
+    "LowLevelDesign/Diagrams/New folder",
+    "LowLevelDesign/Diagrams/DesignAParkingLot/02-Design a Parking Lot.drawio.crswap",
+    "LowLevelDesign/Diagrams/DesignAParkingLot/02-Design a Parking Lot.drawio",
+    "LowLevelDesign/Diagrams/DesignAParkingLot",
+    "LowLevelDesign/Diagrams/FoodDeliverySystem/02-FoodDeliverySystem.drawio.crswap",
+    "LowLevelDesign/Diagrams/LibraryManagementSystem/Unconfirmed 962657.crdownload",
+    "LowLevelDesign/Diagrams/LibraryManagementSystem/Unconfirmed 324895.crdownload",
+    "LowLevelDesign/00-Basics.md",
     "LowLevelDesign/01-Library Management System.md",
+    "LowLevelDesign/ReadMe.md",
+    "LowLevelDesign/Swiggy Zomato UML.png",
+    "LowLevelDesign/Online Food ordering system.md",
     "SystemDesign/01-Client Server Architecture.md",
-    "LowLevelDesign",
     "SystemDesign/03-Distributed Systems Explained.md",
     "SystemDesign/02-What is Database - Storage 1.md",
     "SystemDesign/ReadMe.md",
@@ -193,10 +207,6 @@
     "SystemDesign/29-How Video Streaming works.md",
     "SystemDesign/28-Scale Cube and Microservices.md",
     "SystemDesign/27-Map Reduce explained with example.md",
-    "SystemDesign/26-HTTPS Security - SSL -TLS - Network Protocols.md",
-    "SystemDesign/25-How to Design API during interview.md",
-    "SystemDesign/24-Rate Limiting.md",
-    "SystemDesign/23-Twitter Timeline Architecture - Fanout.md",
-    "SystemDesign"
+    "SystemDesign/26-HTTPS Security - SSL -TLS - Network Protocols.md"
   ]
 }

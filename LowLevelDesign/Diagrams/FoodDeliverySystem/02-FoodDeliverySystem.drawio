@@ -1,0 +1,325 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="26.0.16">
+  <diagram id="tQbxmt8gLZPUXYCe8Zw8" name="Page-1">
+    <mxGraphModel dx="4359" dy="1358" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-1" value="&lt;font face=&quot;Lucida Console&quot;&gt;DeliveryMetaData&lt;/font&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;spacingLeft=4;spacingRight=4;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="65" y="30" width="260" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-2" value="&lt;font face=&quot;Lucida Console&quot;&gt;- userLoc: Location&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- restaurantLoc : Location&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- orderId : String&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-1">
+          <mxGeometry y="26" width="260" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-1">
+          <mxGeometry y="80" width="260" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-4" value="&lt;font face=&quot;Lucida Console&quot;&gt;+ DeliveryMetaData(String pOrderId, Location pUserLoc, Location pRestaurantLoc)&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;+ getUserLoc() : Location&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;+ getrestaurantLoc() : Location&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-1">
+          <mxGeometry y="88" width="260" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-5" value="&lt;font face=&quot;Lucida Console&quot;&gt;StrategyMgr&lt;/font&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;spacingLeft=4;spacingRight=4;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="520" y="40" width="530" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-6" value="&lt;font face=&quot;Lucida Console&quot;&gt;- strategyMgrInstance: StrategyMgr&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- mtx : Mutex&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-5">
+          <mxGeometry y="26" width="530" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-5">
+          <mxGeometry y="80" width="530" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-8" value="&lt;font face=&quot;Lucida Console&quot;&gt;+ StrategyMgr()&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;+ getStrategyMgr() : StrategyMgr&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;+ determineDeliveryPartnerMatchingStrategy(DeliveryMetaData metaData) : IDeliveryPartnerMatchingStrategy&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-5">
+          <mxGeometry y="88" width="530" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-9" value="&lt;font face=&quot;Lucida Console&quot;&gt;DeliveryMgr&lt;/font&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;spacingLeft=4;spacingRight=4;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-170" y="295" width="510" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-10" value="&lt;font face=&quot;Lucida Console&quot;&gt;- deliveryMgrInstance : DeliveryMgr&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- mtx : Mutex&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-9">
+          <mxGeometry y="26" width="510" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-11" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-9">
+          <mxGeometry y="70" width="510" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-12" value="&lt;font face=&quot;Lucida Console&quot;&gt;- DeliveryMgr()&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- manageDelivery(String pOrderId, DeliveryMetaData pDeliveryMetaData)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;&lt;u&gt;+ getDeliveryMgr() : DeliveryMgr&lt;/u&gt;&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-9">
+          <mxGeometry y="78" width="510" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-13" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;font face=&quot;Lucida Console&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;IDeliveryPartnerMatchingStrategy&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;font face=&quot;Lucida Console&quot;&gt;+ matchDeliveryPartners(DeliveryMetaData pDeliveryMetaData): vector&amp;lt;DeliveryPartner&amp;gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;spacingLeft=4;spacingRight=4;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="480" y="260" width="630" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-14" value="&lt;font face=&quot;Lucida Console&quot;&gt;LocBasedDeliveryPartnerMatchingStrategy&lt;/font&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;spacingLeft=4;spacingRight=4;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="620" y="413.5" width="350" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-16" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-14">
+          <mxGeometry y="26" width="350" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-17" value="&lt;font face=&quot;Lucida Console&quot;&gt;+ matchDeliveryPartners(DeliveryMetaData pDeliveryMetaData) : vector&amp;lt;DeliveryPartner&amp;gt;&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-14">
+          <mxGeometry y="34" width="350" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-18" value="&lt;font face=&quot;Lucida Console&quot;&gt;OrderMgr&lt;/font&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;spacingLeft=4;spacingRight=4;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-90" y="505" width="360" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-19" value="&lt;font face=&quot;Lucida Console&quot;&gt;- deliveryMgrInstance: DeliveryMgr&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- mtx: mutex&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-18">
+          <mxGeometry y="26" width="360" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-20" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-18">
+          <mxGeometry y="70" width="360" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-21" value="&lt;font face=&quot;Lucida Console&quot;&gt;- DeliveryMgr()&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- manageDelivery(String pOrderId, DeliveryMetaData pDeliveryMetaData)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;+ getDeliveryMgr() : DeliveryMgr&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-18">
+          <mxGeometry y="78" width="360" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-22" value="&lt;font face=&quot;Lucida Console&quot;&gt;DeliveryPartner&lt;/font&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;spacingLeft=4;spacingRight=4;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="420" y="570" width="270" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-24" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-22">
+          <mxGeometry y="26" width="270" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-25" value="&lt;font face=&quot;Lucida Console&quot;&gt;+ DeliveryPartner(String pName)&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;+ performDelivery(String pOrderId, DeliveryMetaData pDeliveryMetaData)&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-22">
+          <mxGeometry y="34" width="270" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-26" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;font face=&quot;Lucida Console&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;IPartner&amp;gt;&amp;gt;&lt;/i&gt;&lt;/font&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- rating: RATING&lt;br&gt;- name: String&lt;/font&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;font face=&quot;Lucida Console&quot;&gt;+ IPartner(String pName)&lt;br&gt;+ performKyc(): void&lt;/font&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;spacingLeft=4;spacingRight=4;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="585" y="730" width="230" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-27" value="&lt;font face=&quot;Lucida Console&quot;&gt;DeliveryPartnerMgr&lt;/font&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;spacingLeft=4;spacingRight=4;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="960" y="540" width="590" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-28" value="&lt;font face=&quot;Lucida Console&quot;&gt;- deliveryPartnersMap: unordered_map&amp;lt;string, DeliveryPartner&amp;gt;&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- deliveryPartnerMgrInstance : DeliveryPartnerMgr&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- mtx : mutex&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-27">
+          <mxGeometry y="26" width="590" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-29" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-27">
+          <mxGeometry y="90" width="590" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-30" value="&lt;font face=&quot;Lucida Console&quot;&gt;+ DeliveryPartnerMgr()&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;&lt;u&gt;+ getDeliveryPartnerMgr() : DeliveryPartnerMgr&lt;/u&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;+ addDeliveryPartner(String pDeliveryPartnerName, DeliveryPartner pDeliveryPartner)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;+ getDeliveryPartner(string pDeliveryPartnerName) : DeliveryPartner&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-27">
+          <mxGeometry y="98" width="590" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-31" value="&lt;font face=&quot;Lucida Console&quot;&gt;FoodMgr&lt;/font&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;spacingLeft=4;spacingRight=4;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-180" y="710" width="550" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-32" value="&lt;font face=&quot;Lucida Console&quot;&gt;- foodMgrInstance: FoodMgr&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- mtx : mutex&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-31">
+          <mxGeometry y="26" width="550" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-33" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-31">
+          <mxGeometry y="120" width="550" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-34" value="&lt;font face=&quot;Lucida Console&quot;&gt;- FoodMgr()&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;&lt;u&gt;+ getFoodMgr() : FoodMgr&lt;/u&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;+ prepareFood(String pOrderId, String pRestaurantId, unordered_map&amp;lt;Dish, int&amp;gt; pDishes)&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-31">
+          <mxGeometry y="128" width="550" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-35" value="&lt;font face=&quot;Lucida Console&quot;&gt;RestaurantMgr&lt;/font&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;spacingLeft=4;spacingRight=4;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="960" width="420" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-36" value="&lt;font face=&quot;Lucida Console&quot;&gt;- restaurantsMap : unordered_map&amp;lt;String, Restaurant&amp;gt;&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- restaurantMgrInstance : RestaurantMgr&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- mtx : mutex&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-35">
+          <mxGeometry y="26" width="420" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-37" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-35">
+          <mxGeometry y="100" width="420" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-38" value="&lt;font face=&quot;Lucida Console&quot;&gt;- RestaurantMgr()&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;&lt;u&gt;+ getRestaurantMgr() : RestaurantMgr&lt;/u&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;+ addRestaurant(String pRestaurantName, Restaurant pRestaurant)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;+ getRestaurant(String pRestaurantName) : Restaurant&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-35">
+          <mxGeometry y="108" width="420" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-39" value="&lt;font face=&quot;Lucida Console&quot;&gt;Restaurant&lt;/font&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;spacingLeft=4;spacingRight=4;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="556" y="974" width="550" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-40" value="&lt;font face=&quot;Lucida Console&quot;&gt;- name: String&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- isAvail : boolean&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- menu : Menu&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- location : Location&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- owner : RestaurantOwner&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-39">
+          <mxGeometry y="26" width="550" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-41" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-39">
+          <mxGeometry y="110" width="550" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-42" value="&lt;font face=&quot;Lucida Console&quot;&gt;+ Restaurant(String pName, RestaurantOwner pOwner, Location pLoc)&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;+ prepareFood(String pOrderId, unordered_map&amp;lt;Dish, int&amp;gt; dishes) : bool&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-39">
+          <mxGeometry y="118" width="550" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-43" value="&lt;font face=&quot;Lucida Console&quot;&gt;Menu&lt;/font&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;spacingLeft=4;spacingRight=4;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="920" y="1421" width="220" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-44" value="&lt;font face=&quot;Lucida Console&quot;&gt;- dishes: vector&amp;lt;Dish&amp;gt;&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-43">
+          <mxGeometry y="26" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-45" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-43">
+          <mxGeometry y="52" width="220" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-46" value="&lt;font face=&quot;Lucida Console&quot;&gt;+ Menu(vector&amp;lt;Dish&amp;gt; pDishes)&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-43">
+          <mxGeometry y="60" width="220" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-47" value="&lt;font face=&quot;Lucida Console&quot;&gt;Dish&lt;/font&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;spacingLeft=4;spacingRight=4;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="500" y="1381" width="330" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-48" value="&lt;font face=&quot;Lucida Console&quot;&gt;- name: String&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- description : String&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- cuisine : CUISINE&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- price : double&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- dishImages : vector&amp;lt;String&amp;gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- addOns : vector&amp;lt;DishAddOn&amp;gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-47">
+          <mxGeometry y="26" width="330" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-49" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-47">
+          <mxGeometry y="130" width="330" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-50" value="&lt;font face=&quot;Lucida Console&quot;&gt;+ Dish(String pName, CUISINE pCuisine, double pPrice)&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-47">
+          <mxGeometry y="138" width="330" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-51" value="&lt;font face=&quot;Lucida Console&quot;&gt;DishAddOn&lt;/font&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;spacingLeft=4;spacingRight=4;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="65" y="1396" width="370" height="134" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-52" value="&lt;font face=&quot;Lucida Console&quot;&gt;- name: String&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- description : String&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- price : double&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- images : vector&amp;lt;String&amp;gt;&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-51">
+          <mxGeometry y="26" width="370" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-53" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-51">
+          <mxGeometry y="100" width="370" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-54" value="&lt;font face=&quot;Lucida Console&quot;&gt;+ DishAddOn(String pName, double pPrice)&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-51">
+          <mxGeometry y="108" width="370" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-55" value="&lt;font face=&quot;Lucida Console&quot;&gt;NotificationMgr&lt;/font&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;spacingLeft=4;spacingRight=4;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="334" y="1813" width="610" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-56" value="&lt;font face=&quot;Lucida Console&quot;&gt;- notificationSendersMap: unordered_map&amp;lt;String, vector&amp;lt; Pair&amp;lt;String, INotificationSender&amp;gt; &amp;gt;&amp;gt;&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- notificationMgrInstance : NotificationMgr&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- mtx : mutex&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-55">
+          <mxGeometry y="26" width="610" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-57" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-55">
+          <mxGeometry y="130" width="610" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-58" value="&lt;font face=&quot;Lucida Console&quot;&gt;- NotificationMgr()&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;&lt;u&gt;+ getNotificationMgr() : NotificationMgr&lt;/u&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;+ addNotificationSender(String pOrderId, String pUserId, INotificationSender pNotificationSender)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;+ removeNotificationSender(String pOrderId, String pUserId, INotificationSender pNotificationSender)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;+ notify(String pOrderId, String pMsg)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;+ notifyParticularUser(String pUserId, String pMsg, INotificationSender sender)&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-55">
+          <mxGeometry y="138" width="610" height="132" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-64" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;font face=&quot;Lucida Console&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;INotificationSender&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;font face=&quot;Lucida Console&quot;&gt;+ sendNotification(String pUsedId, String msg)&lt;br&gt;&lt;/font&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;spacingLeft=4;spacingRight=4;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="564" y="2136" width="230" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-65" value="&lt;font face=&quot;Lucida Console&quot;&gt;PushNotificationSender&lt;/font&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;spacingLeft=4;spacingRight=4;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="270" y="2283" width="350" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-67" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-65">
+          <mxGeometry y="26" width="350" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-68" value="&lt;font face=&quot;Lucida Console&quot;&gt;+ sendNotification(String pUsedId, String msg)&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-65">
+          <mxGeometry y="34" width="350" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-69" value="&lt;font face=&quot;Lucida Console&quot;&gt;SMSNotificationSender&lt;/font&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;spacingLeft=4;spacingRight=4;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="756" y="2283" width="350" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-70" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-69">
+          <mxGeometry y="26" width="350" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-71" value="&lt;font face=&quot;Lucida Console&quot;&gt;+ sendNotification(String pUsedId, String msg)&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-69">
+          <mxGeometry y="34" width="350" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-72" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="MRODDuQRSGrZKCUZfiP3-65" target="MRODDuQRSGrZKCUZfiP3-64">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="624" y="2093" as="sourcePoint" />
+            <mxPoint x="784" y="2093" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-74" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="MRODDuQRSGrZKCUZfiP3-69" target="MRODDuQRSGrZKCUZfiP3-64">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="624" y="2093" as="sourcePoint" />
+            <mxPoint x="784" y="2093" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-75" value="" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.557;entryY=0.973;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="MRODDuQRSGrZKCUZfiP3-64" target="MRODDuQRSGrZKCUZfiP3-58">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="624" y="2093" as="sourcePoint" />
+            <mxPoint x="784" y="2093" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-76" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="MRODDuQRSGrZKCUZfiP3-52" target="MRODDuQRSGrZKCUZfiP3-48">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="501" y="1554" as="sourcePoint" />
+            <mxPoint x="661" y="1554" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-77" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="MRODDuQRSGrZKCUZfiP3-48" target="MRODDuQRSGrZKCUZfiP3-44">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="501" y="1554" as="sourcePoint" />
+            <mxPoint x="661" y="1554" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-78" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.48;entryY=0.938;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="MRODDuQRSGrZKCUZfiP3-43" target="MRODDuQRSGrZKCUZfiP3-42">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="570" y="1490" as="sourcePoint" />
+            <mxPoint x="780" y="1190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-80" value="" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=1.013;entryY=-0.036;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.004;exitY=0.758;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="MRODDuQRSGrZKCUZfiP3-40" target="MRODDuQRSGrZKCUZfiP3-38">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="430" y="1270" as="sourcePoint" />
+            <mxPoint x="590" y="1270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-85" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.509;exitY=1.044;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="MRODDuQRSGrZKCUZfiP3-12" target="MRODDuQRSGrZKCUZfiP3-18">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="-20" y="440" as="sourcePoint" />
+            <mxPoint x="140" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-86" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.508;exitY=1.037;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="MRODDuQRSGrZKCUZfiP3-21" target="MRODDuQRSGrZKCUZfiP3-31">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="70" y="680" as="sourcePoint" />
+            <mxPoint x="40" y="810" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-87" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="MRODDuQRSGrZKCUZfiP3-9" target="MRODDuQRSGrZKCUZfiP3-4">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="100" y="380" as="sourcePoint" />
+            <mxPoint x="260" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-88" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;entryX=0.008;entryY=0.194;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=1.159;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="MRODDuQRSGrZKCUZfiP3-10" target="MRODDuQRSGrZKCUZfiP3-8">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="430" y="560" as="sourcePoint" />
+            <mxPoint x="590" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-90" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.521;exitY=1.083;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="MRODDuQRSGrZKCUZfiP3-8" target="MRODDuQRSGrZKCUZfiP3-13">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="870" y="590" as="sourcePoint" />
+            <mxPoint x="1030" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-91" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="MRODDuQRSGrZKCUZfiP3-14" target="MRODDuQRSGrZKCUZfiP3-13">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="1090" y="590" as="sourcePoint" />
+            <mxPoint x="1250" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-92" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.906;exitY=1.113;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="MRODDuQRSGrZKCUZfiP3-12" target="MRODDuQRSGrZKCUZfiP3-22">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="540" y="770" as="sourcePoint" />
+            <mxPoint x="700" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-93" value="" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.007;entryY=-0.022;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="MRODDuQRSGrZKCUZfiP3-25" target="MRODDuQRSGrZKCUZfiP3-30">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="830" y="840" as="sourcePoint" />
+            <mxPoint x="990" y="840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-94" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.457;exitY=0.996;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="MRODDuQRSGrZKCUZfiP3-25" target="MRODDuQRSGrZKCUZfiP3-26">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="550" y="666" as="sourcePoint" />
+            <mxPoint x="990" y="840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-95" value="&lt;font face=&quot;Lucida Console&quot;&gt;RestaurantOwner&lt;/font&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;spacingLeft=4;spacingRight=4;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="910" y="860" width="160" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-97" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="MRODDuQRSGrZKCUZfiP3-95">
+          <mxGeometry y="26" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-99" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="MRODDuQRSGrZKCUZfiP3-95" target="MRODDuQRSGrZKCUZfiP3-26">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="690" y="920" as="sourcePoint" />
+            <mxPoint x="850" y="920" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-100" value="" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.536;entryY=-0.018;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="MRODDuQRSGrZKCUZfiP3-95" target="MRODDuQRSGrZKCUZfiP3-39">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="690" y="920" as="sourcePoint" />
+            <mxPoint x="850" y="920" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-101" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;entryX=1.012;entryY=-0.043;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.006;exitY=1.007;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="MRODDuQRSGrZKCUZfiP3-6" target="MRODDuQRSGrZKCUZfiP3-4">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="270" y="260" as="sourcePoint" />
+            <mxPoint x="430" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MRODDuQRSGrZKCUZfiP3-102" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.986;exitY=-0.023;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="MRODDuQRSGrZKCUZfiP3-12" target="MRODDuQRSGrZKCUZfiP3-13">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="270" y="260" as="sourcePoint" />
+            <mxPoint x="430" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

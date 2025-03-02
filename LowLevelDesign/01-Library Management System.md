@@ -1,8 +1,11 @@
+```java
+True -> Wrong
+true -> right representation in java, change later
+```
 #### Actors
 1. **Librarian (Admin)**
 2. **Member (User)**
 3. **System**
-
 
 #### Top Use Cases:
 1. **Register new account/cancel membership:**
@@ -49,7 +52,7 @@
 	1. System updates the status to `Available`
 7. System sends notification to the member who has reserved the book about the availability of the book.
 
-### 3. Renew a book:
+#### 3. Renew a book:
 1. Member scans their library card through barcode reader
 2. Member scans barcode of the book and selects to renew the book
 3. System fetches book's details
@@ -125,7 +128,388 @@ public void renewBook(User user, Book book){
 	}
 }
 ```
-#### Skeleton of the system
+### 1. Skeleton of the system
+##### 1. Managing Users & Performed Actions on System
 ```java
+public class Account{
+	String userId;
+	String password;
+	String accountStatus;
+	User user; //Enhace all the User related Details here.
 
+	//methods
+	+ boolean resetPassword();
+}
+
+// Admin
+public class Librarian extends Account{
+	// 1. managing inventory
+	+ boolean addBook(Book book);
+
+	// 2. managing Users
+	+ boolean blockUser(User user);
+	+ boolean unBlockUser(User user);
+}
+
+// User
+public class Member extends Account{
+	int totalBooksCheckedOut; //booksIssued
+
+	// Actions: Outcomes
+	+ boolean checkOutBook(Book book);
+	+ boolean reserveBook(Book book);
+	+ boolean returnBook(Book book);
+	+ boolean renewBook(Book book);
+}
 ```
+
+##### 2. Managing Inventory of System
+```java
+public class Book {
+	+ String id;
+	+ String title;
+
+	// checks to checkout that book
+	+ boolean checkOut(String userId);
+}
+
+public class Search {
+	// 1. method on Book
+	+ List<Book> searchByTitle(String title);
+}
+```
+##### 3. Functionalities of System
+```java
+//operations on the Book
+public class BookReservation {
+	String reservationStatus;
+	Book book;
+	User user;
+
+	//Got Association of 2 class
+	+ BookReservation fetchReservationDetails(Book book, User user);
+}
+
+public class BookLending {
+	Date dueDate;
+	Book book;
+	User user;
+
+	//Got Association of 2 objects
+	+ void lendBook(Book book, User user);
+	+ BookLending fetchLendingDetails(Book book, User user);
+}
+
+public class Fine {
+	+ Date today;
+	+ Book book;
+	+ User user;
+
+	+ int void collectFine(Book book, User user)
+}
+```
+
+
+### 2. Extending Above Code
+
+##### 2a. Inventory
+```java
+/*
+	Inventory: Books & Searching books
+	Books: Inventory Item, so focus more about (features) to this item.
+	Search: Focuses functionalities 
+*/
+```
+
+```java
+// Each Book can have many copies, so each copy is denoted as BookItem
+public abstract class Book {
+	private String ISBN;  // Unique for a Book
+	private String title; // mandatory
+	
+	//requirement
+	private String subject;
+	private String publisher;
+	private List<Author> authors; // association, enhancing
+
+	private String language;  
+	private int numberOfPages;
+}
+
+public class Author {
+	public String name;
+	public String description;
+}
+
+public class BookItem extends Book {
+	private String barcode; // Unique for copy
+	private boolean isReferenceOnly; // Can't issue this kind of book
+
+	private Date dateOfPurchase; //other metadata
+	private Date publicationDate;
+	private double price;
+
+	// used for business Logic
+	private Date borrowed;
+	private Date dueDate;
+
+	private BookFormat format; // hardcover, paperback, .. (primitive -> enum)
+	private BookStatus status; // available, reserved, ..  (primitive -> enum)
+		
+	private Rack placedAt;   // {num:1, loc: "bottom"} ie. association enhance
+
+	public boolean checkout(String memberId); //complete this method
+}
+
+public class Rack {
+	private int number;
+	private String locationIdentifier;
+}
+
+public enum BookFormat {
+	HARDCOVER,
+	PAPERBACK,
+	AUDIO_BOOK,
+	EBOOK,
+	NEWSPAPER,
+	MAGAZINE,
+	JOURNAL
+}
+
+public enum BookStatus {
+	AVAILABLE,
+	RESERVED,
+	LOANED,
+	LOST
+}
+```
+
+```java
+// Search interface & catalog
+public interface Search {
+	
+	// Based on requirements
+	public List<Book> searchByTitle(String title);
+	public List<Book> searchByAuthor(String author);
+	public List<Book> searchBySubject(String subject);
+	public List<Book> searchByPubDate(String publishDate);
+}
+
+// Catalog implements Search
+public Catalog implements Search {
+
+	//Assume DB Records, with Key as search Item
+	private HashMap<String, List<Book>> bookTitles;
+	private HashMap<String, List<Book>> bookAuthors;
+	private HashMap<String, List<Book>> bookSubjects;
+	private HashMap<String, List<Book>> bookPublicationDates;
+	
+	public List<Book> searchByTitle(String title){
+		// return all the books containing the string query in their title
+		return bookTitles.get(query)
+	}
+
+	// similarly rest 3 methods.
+}
+```
+
+##### 2b. Functionalities
+```java
+/* Actions:
+	1. fetchReservationDetails(String barcode)
+	2. lendBook(String barcode, String memberId)
+	3. fetchLendingDetails(String barcode);
+	4. collectFine(String memberId, long days)
+*/
+
+public class BookReservation {
+	
+	private String bookBarcode;
+	private String memberId;
+
+	//Date
+	private Date creationDate;
+	private ReservationStatus status; // waiting, pending, canceled, none
+
+	public static BookReservervation fetchReservationDetails(String barcode);
+	public void updateStatus(ReservationStatus resStatus); 
+}
+
+public enum ReservationStatus {
+	WAITING,
+	PENDING,
+	CANCELED,
+	NONE
+}
+
+public class BookLending {
+
+	private String bookBarcode;
+	private String memberId;
+
+	// lending details
+	private Date creationDate;
+	private Date dueDate;
+	private Date returnDate;
+	
+	public static void lendBook(String barcode, String memberId);
+	public static BookLending fetchLendingDetails(String barcode);
+}
+
+public class Fine {
+
+	private double bookBarcode;
+	private String memberId;
+
+	private Date creationDate;
+
+	public static void collectFine(String memberId, long days);
+}
+```
+
+##### 1. Managing Users & Performed Actions on System
+```java
+// Account: Member & Librarian - These classes represent different people that interact with our system
+
+
+/* 
+7. For simplicity, we are not defining getter & setter functions.
+8. The readers can assume that all class attributes are private & accessed through their respective public getter method & modified only through public setter method.
+*/
+```
+
+```java
+public abstract class Account{
+	private String id;
+	private String password;
+	private AccountStatus status; //fixed Values, so extending primitive to Enum
+	private Person person; //Lots details, so extending primitive to Class
+
+	public boolean resetPassword();
+}
+
+// Associations of above class: 
+// 1. AccountStatus:Enum
+public enum AccountStatus {
+	ACTIVE,
+	CLOSED,
+	CANCELLED,
+	BLACKLISTED,
+	NONE
+}
+
+// 2. Person: Class
+public class Person {
+	private String name;
+	private String email;
+	private String phone;
+	private Address address; //Lots of details, so extending primitive to Class
+}
+// 2a. Address: Class
+public class Address {
+	private String streetAddress;
+	private String city;
+	private String state;
+	private String zipCode;
+	private String country;
+}
+```
+
+```java
+public class Librarian extends Account{
+	public boolean addBookItem(BookItem bookItem);
+	public boolean blockMember(Member member);
+	public boolean unBlockMember(Member member);
+}
+```
+
+```java
+public class Member extends Account{
+	private Date dateOfMembership;
+	private int totalBooksCheckedout;
+
+	public void incrementTotalBooksCheckedout(); // feels optional, can use setter
+	public int getTotalBooksCheckedout();// Actually we'll use this;
+
+	//Actions: (uses BookReservation, BookLending & Fine)
+	public boolean checkoutBookItem(BookItem bookItem);
+	public boolean reserveBookItem(BookItem bookItem);
+
+	public boolean returnBookItem(BookItem bookItem);
+	public boolean renewBookItem(BookItem bookItem);
+
+	// 1. checkout:
+	public boolean checkoutBookItem(BookItem bookItem){
+		
+		if( this.getTotalBooksCheckedOut() >= Constants.MAX_BOOKS_ISSUED){
+			println('Show Error');
+		}
+		
+		//has member details, if reserved.
+		BookReservation bookRes = BookReservation.fetchReserDetails(bookItem);
+		if(bookRes != null && bookRes.getMemberId() != this.getId()){
+			println("Show Error: It's reserved by another person");
+			return False;
+		} else if(bookRes != null){
+			// this.person, reserved the book
+			bookRes.updateStatus(ReservationStatus.COMPLETED);
+		}
+
+		if(!bookItem.checkout( this.getId() )) {
+			return False;
+		}
+
+		this.totalBooksCheckedout++; // we can use getters & setters for this
+		return True;
+	}
+
+	// Collecting Fine :-> returnBookItem
+	private void checkForFine(String bookBarcode){
+		BookLending bookLending = BookLending.fetchLendingDetails(bookBarcode);
+		Date dueDate = bookLending.getDueDate();
+		Date today = new Date();
+
+		// check if book has returned within due date
+		if(today.compareTo(dueDate) > 0){
+			long diff = todayDate.getTime() - dueDate.getTime();
+			long diffDays = diff / (24 * 60 * 60 * 1000);
+			Fine.collectFine(memberId, diffDays);
+		}
+	}
+
+	// 2. returning BookItem
+	public void returnBookItem(BookItem bookItem){
+		this.checkForFine(bookItem.getBookBarcode());
+		BookReservation bookRes = BookReservation.fetchReservationDetails(bookItem.getBarcode());
+		
+		if(bookReservation != null){
+			bookItem.updateBookItemStatus(BookStatus.RESERVED);
+			bookReservation.sendBookAvailableNotification();
+		} else{
+			bookItem.updateBookItemStatus(BookStatus.AVAILABLE);
+		}
+	}
+
+	// 3. renew BookItem
+	public boolean renewBookItem(BookItem bookItem) {
+		this.checkForFine();
+		BookReservation bookReservation = 
+			BookReservation.fetchReservationDetails(bookItem.getBarcode());
+
+		if( bookReservation != null 
+			&& bookReservation.getMemberId() != member.getMemberId()) {
+			ShowError("This book is reserved by another member");
+			member.decrementTotalBooksCheckedout(); // need to implement
+			bookItem.updateBookItemState(BookStatus.RESESRVED);
+			bookReservation.sendBookAvailableNotification();
+			return False;
+		} else if (bookReservation != null) {
+			bookReservation.updateStatus(ReservationStatus.COMPLETED);
+		}
+		BookLending.lendBook(bookItem.getBarCode(), this.getMemberId());
+		bookItem.updateDueDate(LocalDate.now().plusDays(Constants.MAX_LENDING_DAYS));
+		return True;
+	}
+}
+```
+

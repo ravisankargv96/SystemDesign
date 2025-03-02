@@ -1,0 +1,37 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="26.0.16">
+  <diagram name="Page-1" id="TDDds68SdLlshNqR7nJK">
+    <mxGraphModel dx="1823" dy="776" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="VjH9MgT5xztS54D-7pJc-1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;font face=&quot;Lucida Console&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;Search&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;font face=&quot;Lucida Console&quot;&gt;+ searchByTitle(String): List&amp;lt;Book&amp;gt;&lt;br&gt;+ searchByAuthor(String): List&amp;lt;Book&amp;gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;font face=&quot;Lucida Console&quot;&gt;+ searchBySubject(String): List&amp;lt;Book&amp;gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;font face=&quot;Lucida Console&quot;&gt;+ searchByPubDate(Date): List&amp;lt;Book&amp;gt;&lt;/font&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;spacingLeft=4;spacingRight=4;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="460" y="183" width="350" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="VjH9MgT5xztS54D-7pJc-2" value="&lt;font face=&quot;Lucida Console&quot;&gt;Catalog&lt;/font&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;spacingLeft=4;spacingRight=4;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="440" y="351" width="390" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="VjH9MgT5xztS54D-7pJc-3" value="&lt;font face=&quot;Lucida Console&quot;&gt;- bookTitle: HashMap&amp;lt;String, List&amp;lt;Book&amp;gt;&amp;gt;&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- bookAuthors : HashMap&amp;lt;String, List&amp;lt;Book&amp;gt;&amp;gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- bookSubjects : HashMap&amp;lt;String, List&amp;lt;Book&amp;gt;&amp;gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;- bookPublicationDates : HashMap&amp;lt;String, List&amp;lt;Book&amp;gt;&amp;gt;&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="VjH9MgT5xztS54D-7pJc-2">
+          <mxGeometry y="26" width="390" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="VjH9MgT5xztS54D-7pJc-4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="VjH9MgT5xztS54D-7pJc-2">
+          <mxGeometry y="100" width="390" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="VjH9MgT5xztS54D-7pJc-5" value="&lt;font face=&quot;Lucida Console&quot;&gt;+ searchByTitle(String): List&amp;lt;Book&amp;gt;&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;+ searchByAuthor(String): List&amp;lt;Book&amp;gt;&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="VjH9MgT5xztS54D-7pJc-2">
+          <mxGeometry y="108" width="390" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="VjH9MgT5xztS54D-7pJc-6" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="VjH9MgT5xztS54D-7pJc-2" target="VjH9MgT5xztS54D-7pJc-1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="635" y="374" as="sourcePoint" />
+            <mxPoint x="635" y="304" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VjH9MgT5xztS54D-7pJc-9" value="&lt;font style=&quot;font-size: 14px;&quot; face=&quot;Lucida Console&quot;&gt;&lt;b&gt;Step 1&lt;/b&gt;&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="595" y="155" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjH9MgT5xztS54D-7pJc-10" value="&lt;font style=&quot;font-size: 14px;&quot; face=&quot;Lucida Console&quot;&gt;&lt;b&gt;Step 1a&lt;/b&gt;&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="650" y="326" width="80" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
