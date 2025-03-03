@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LowLevelDesign/01-Library Management System.md",
+                "file": "LowLevelDesign/00-Basics.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01-Library Management System"
+              "title": "00-Basics"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 321.5,
-    "collapsed": true
+    "width": 321.5
   },
   "right": {
     "id": "a7f0f3705f39d2c2",
@@ -171,6 +170,9 @@
   },
   "active": "3b53ab90de2d42a1",
   "lastOpenFiles": [
+    "LowLevelDesign/01-Library Management System.md",
+    "LowLevelDesign/Diagrams/Untitled Diagram.drawio.crswap",
+    "LowLevelDesign/Diagrams/Untitled Diagram.drawio",
     "LowLevelDesign/Diagrams/DesignAmazon/Unconfirmed 496080.crdownload",
     "LowLevelDesign/Diagrams/DesignAmazon/DesignAmazon.drawio.crswap",
     "LowLevelDesign/Diagrams/DesignAmazon/DesignAmazon.drawio",
@@ -179,11 +181,7 @@
     "LowLevelDesign/Diagrams/DesignAParkingLot/02-Design a Parking Lot.drawio.crswap",
     "LowLevelDesign/Diagrams/DesignAParkingLot/02-Design a Parking Lot.drawio",
     "LowLevelDesign/Diagrams/DesignAParkingLot",
-    "LowLevelDesign/Diagrams/FoodDeliverySystem/02-FoodDeliverySystem.drawio.crswap",
-    "LowLevelDesign/Diagrams/LibraryManagementSystem/Unconfirmed 962657.crdownload",
-    "LowLevelDesign/Diagrams/LibraryManagementSystem/Unconfirmed 324895.crdownload",
     "LowLevelDesign/00-Basics.md",
-    "LowLevelDesign/01-Library Management System.md",
     "LowLevelDesign/ReadMe.md",
     "LowLevelDesign/Swiggy Zomato UML.png",
     "LowLevelDesign/Online Food ordering system.md",

@@ -2,6 +2,14 @@
 Here’s an example in Java that demonstrates all the relationships you’ve mentioned:
 #### Basics
 ##### 1. Interface
+###### Diagram
+```mermaid
+classDiagram
+class Drivable {
+    <<interface>>
+    +drive() void
+}
+```
 An interface defines a contract that classes can implement.
 ```java
 interface Drivable {
@@ -17,6 +25,15 @@ abstract class Vehicle {
     void stop() {
         System.out.println("Vehicle stopped.");
     }
+}
+```
+###### Diagram
+```mermaid
+classDiagram
+class Vehicle {
+    <<abstract>>
+    +start() void
+    +stop() void
 }
 ```
 ##### 3. Class
@@ -35,6 +52,29 @@ class Car extends Vehicle implements Drivable {
     }
 }
 ```
+###### Diagram
+```mermaid
+classDiagram
+class Vehicle {
+    <<abstract>>
+    +start() void
+    +stop() void
+}
+
+class Drivable {
+    <<interface>>
+    +drive() void
+}
+
+class Car {
+    +start() void
+    +drive() void
+}
+
+Vehicle <|-- Car
+Drivable <|.. Car
+```
+
 #### OOPS
 ##### 4. Generalization: A implements B
 A class implements an interface.
@@ -46,6 +86,33 @@ class Bike implements Drivable {
     }
 }
 ```
+###### Diagram
+```mermaid
+classDiagram
+class Drivable {
+    <<interface>>
+    +drive() void
+}
+
+class Vehicle {
+    <<abstract>>
+    +start() void
+    +stop() void
+}
+
+class Car {
+    +start() void
+    +drive() void
+}
+
+class Bike {
+    +drive() void
+}
+
+Vehicle <|-- Car
+Drivable <|.. Car
+Drivable <|.. Bike
+```
 ##### 5. Inheritance: A inherits from B. A "is-a" B.
 A class inherits from another class.
 ```java
@@ -54,6 +121,20 @@ class ElectricCar extends Car {
         System.out.println("Electric car is charging.");
     }
 }
+```
+###### Diagram
+```mermaid
+classDiagram
+class Car {
+    +start() void
+    +drive() void
+}
+
+class ElectricCar {
+    +charge() void
+}
+
+Car <|-- ElectricCar
 ```
 #### Types of Associations
 ##### 6. **Use Interface: A uses interface B.**
@@ -71,6 +152,21 @@ class Driver {
         vehicle.drive();
     }
 }
+```
+###### Diagram
+```mermaid
+classDiagram
+class Drivable {
+    <<interface>>
+    +drive() void
+}
+
+class Driver {
+    -vehicle : Drivable
+    +Driver(vehicle : Drivable)
+    +operateVehicle() void
+}
+Driver *-- Drivable
 ```
 ##### 7. **Association: A and B call each other.**
 
@@ -95,6 +191,21 @@ class CarWithEngine {
     }
 }
 ```
+###### Diagram
+```mermaid
+classDiagram
+class Engine {
+    +start() void
+}
+
+class CarWithEngine {
+    -engine : Engine
+    +CarWithEngine(engine : Engine)
+    +startCar() void
+}
+
+CarWithEngine *-- Engine
+```
 ##### 8. **Uni-directional Association: A can call B, but not vice versa.**
 One class knows about and uses another class, but not the other way around.
 ```java
@@ -115,6 +226,21 @@ class CarWithRadio {
         radio.playMusic();
     }
 }
+```
+###### Diagram
+```mermaid
+classDiagram
+class Radio {
+    +playMusic() void
+}
+
+class CarWithRadio {
+    -radio : Radio
+    +CarWithRadio(radio : Radio)
+    +playCarMusic() void
+}
+
+CarWithRadio *-- Radio
 ```
 ##### 9. **Aggregation: A "has-an" instance of B. B can exist without A.**
 
@@ -147,6 +273,23 @@ class CarWithWheels {
     }
 }
 ```
+###### Diagram
+```mermaid
+classDiagram
+class Wheel {
+    -type : String
+    +Wheel(type : String)
+    +rotate() void
+}
+
+class CarWithWheels {
+    -wheels : Wheel[]
+    +CarWithWheels(wheels : Wheel[])
+    +move() void
+}
+
+CarWithWheels *-- Wheel
+```
 ##### 10. **Composition: A "has-an" instance of B. B cannot exist without A.**
 
 A class contains another class, and the contained class cannot exist independently.
@@ -170,6 +313,21 @@ class CarWithComposition {
         System.out.println("Car started.");
     }
 }
+```
+###### Diagram
+```mermaid
+classDiagram
+class Engine {
+    +start() void
+}
+
+class CarWithComposition {
+    -engine : Engine
+    +CarWithComposition()
+    +startCar() void
+}
+
+CarWithComposition *-- Engine
 ```
 #### Driver Code
 ```java
@@ -249,7 +407,28 @@ class Address {
     }
 }
 ```
+###### Diagram
+```mermaid
+classDiagram
+class Person {
+    -name : String
+    -address : Address
+    +Person(name : String, address : Address)
+    +display() void
+    +getName() String
+}
 
+class Address {
+    -city : String
+    -person : Person
+    +Address(city : String)
+    +setPerson(person : Person)
+    +display() void
+}
+
+Person *-- Address
+Address o-- Person
+```
 Here:
 - `Person` has a reference to `Address`.
 - `Address` also has a reference to `Person`.
@@ -281,7 +460,21 @@ Here:
 - `CarWithRadio` has a reference to `Radio`.
 - `CarWithRadio` can call methods on `Radio`.
 - `Radio` does not have a reference to `CarWithRadio`.
+###### Diagram
+```mermaid
+classDiagram
+class Radio {
+    +playMusic() void
+}
 
+class CarWithRadio {
+    -radio : Radio
+    +CarWithRadio(radio : Radio)
+    +playCarMusic() void
+}
+
+CarWithRadio o-- Radio
+```
 #### Updated Example to Show Both Relationships
 ```java
 public class Main {
@@ -298,6 +491,49 @@ public class Main {
         carWithRadio.playCarMusic();
     }
 }
+```
+###### Diagram
+```mermaid
+%% {init: {'theme': 'default', 'themeVariables': {'diagramWidth': '500px', 'diagramHeight': '10px'}}}%%
+classDiagram
+class Main {
+    +main(String[] args)
+}
+
+class Person {
+    -name : String
+    -address : Address
+    +Person(name : String, address : Address)
+    +display() void
+    +getName() String
+}
+
+class Address {
+    -city : String
+    -person : Person
+    +Address(city : String)
+    +setPerson(person : Person)
+    +display() void
+}
+
+class Radio {
+    +playMusic() void
+}
+
+class CarWithRadio {
+    -radio : Radio
+    +CarWithRadio(radio : Radio)
+    +playCarMusic() void
+}
+
+Main --> Person
+Main --> Address
+Main --> Radio
+Main --> CarWithRadio
+
+Person *-- Address
+Address o-- Person
+CarWithRadio o-- Radio
 ```
 
 #### Output:

@@ -1,0 +1,6 @@
+.mermaid {
+    max-width: 100%;
+    height: auto;
+    transform: scale(0.8); /* Adjust the scale */
+    transform-origin: top left; /* Align scaling */
+}
