@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "070b2b8a2396ff65",
+        "id": "46209a50e1fb49eb",
         "type": "tabs",
         "children": [
           {
-            "id": "3b53ab90de2d42a1",
+            "id": "694082640ba8c4f9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LowLevelDesign/00-Basics.md",
+                "file": "SystemDesign/ReadMe.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "00-Basics"
+              "title": "ReadMe"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 321.5
+    "width": 322.5,
+    "collapsed": true
   },
   "right": {
     "id": "a7f0f3705f39d2c2",
@@ -168,43 +169,44 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3b53ab90de2d42a1",
+  "active": "694082640ba8c4f9",
   "lastOpenFiles": [
-    "LowLevelDesign/01-Library Management System.md",
-    "LowLevelDesign/Diagrams/Untitled Diagram.drawio.crswap",
-    "LowLevelDesign/Diagrams/Untitled Diagram.drawio",
-    "LowLevelDesign/Diagrams/DesignAmazon/Unconfirmed 496080.crdownload",
-    "LowLevelDesign/Diagrams/DesignAmazon/DesignAmazon.drawio.crswap",
-    "LowLevelDesign/Diagrams/DesignAmazon/DesignAmazon.drawio",
-    "LowLevelDesign/Diagrams/DesignAmazon",
-    "LowLevelDesign/Diagrams/New folder",
-    "LowLevelDesign/Diagrams/DesignAParkingLot/02-Design a Parking Lot.drawio.crswap",
-    "LowLevelDesign/Diagrams/DesignAParkingLot/02-Design a Parking Lot.drawio",
-    "LowLevelDesign/Diagrams/DesignAParkingLot",
-    "LowLevelDesign/00-Basics.md",
-    "LowLevelDesign/ReadMe.md",
-    "LowLevelDesign/Swiggy Zomato UML.png",
-    "LowLevelDesign/Online Food ordering system.md",
-    "SystemDesign/01-Client Server Architecture.md",
-    "SystemDesign/03-Distributed Systems Explained.md",
-    "SystemDesign/02-What is Database - Storage 1.md",
+    "SBTopics/Getting Started _ Building a RESTful Web Service.pdf",
+    "SBTopics/Getting Started _ Building a GraphQL service.pdf",
+    "SystemDesign/04-App Servers/34-Master Load Balancer  Algorithms for Distributed Systems.md",
     "SystemDesign/ReadMe.md",
-    "SystemDesign/42-Stateful vs Stateless Architecture Explained with Real-World Examples.md",
-    "SystemDesign/41-Distributed Caching for System Design.md",
-    "SystemDesign/40-Distributed Messaging Queue - Pub Sub, P2P.md",
-    "SystemDesign/39-Distributed Tracing in Microservices.md",
-    "SystemDesign/38-Mastering Latency Metrics P90, P95, P99.md",
-    "SystemDesign/37-Concurrency made easy.md",
-    "SystemDesign/36-How Distributed Lock works - ft Redis.md",
-    "SystemDesign/35-Idempotency and Intelligent Retry - Paypal.md",
-    "SystemDesign/34-Bloom Filters - HashTable.md",
-    "SystemDesign/33-Heartbeat HTTP Keep-Alive.md",
-    "SystemDesign/32-How Web Sockets work.md",
-    "SystemDesign/31-API Gateway Key Features Explained in System Design.md",
-    "SystemDesign/30-How Webhook works.md",
-    "SystemDesign/29-How Video Streaming works.md",
-    "SystemDesign/28-Scale Cube and Microservices.md",
-    "SystemDesign/27-Map Reduce explained with example.md",
-    "SystemDesign/26-HTTPS Security - SSL -TLS - Network Protocols.md"
+    "SystemDesign/07-Network Protocols/34-Webhooks explained Again.md",
+    "SBTopics/01-Network Layer",
+    "SBTopics/03-DB Basics",
+    "SBTopics/07-Network Protocols",
+    "SystemDesign/11-Miscellenious/23-Twitter Timeline Architecture - Fanout.md",
+    "SystemDesign/06-Distributed Systems/47-Stream Processing.md",
+    "SystemDesign/11-Miscellenious/21-How Leader Election work in Distributed Systems.md",
+    "SystemDesign/06-Distributed Systems/41-Distributed Caching for System Design.md",
+    "SystemDesign/11-Miscellenious/27-Map Reduce explained with example.md",
+    "SystemDesign/03-DB Basics/02-What is Database - Storage 1.md",
+    "SystemDesign/05-DB Advance/11-Caching in a Nutshell - 2.md",
+    "SystemDesign/01-Network Layer/01-Client Server Architecture.md",
+    "SystemDesign/11-Miscellenious",
+    "SystemDesign/10-API Idempotency",
+    "SystemDesign/09-Request Handling",
+    "SystemDesign/08-Microsrvcs & MsgQs",
+    "SystemDesign/07-Network Protocols",
+    "SystemDesign/06-Distributed Systems",
+    "SystemDesign/05-DB Advance/10-Caching in a Nutshell - 1.md",
+    "SystemDesign/01-Network Layer/09-Forward Proxy and Reverse Proxy.md",
+    "SystemDesign/04-App Servers/08 - How Load balancer work.md",
+    "SystemDesign/06-Distributed Systems/07- CAP Theorem Explained.md",
+    "SystemDesign/05-DB Advance/06-Consistent Hashing and Sharding.md",
+    "SystemDesign/05-DB Advance/05-Hashing Simplified.md",
+    "SystemDesign/01-Network Layer/04-Latency versus Thoroughput.md",
+    "SystemDesign/06-Distributed Systems/03-Distributed Systems Explained.md",
+    "SBTopics/Readme.md",
+    "LowLevelDesign/Diagrams/Mermaid/14-Design Pub Sub System.md",
+    "SBTopics/08-Microservices&MessageQueues/Notes.md",
+    "LowLevelDesign/Diagrams/Mermaid/13-Design Tic Tac Toe.md",
+    "LowLevelDesign/Diagrams/Mermaid/12-LRUCache.md",
+    "Untitled.md",
+    "LowLevelDesign/Swiggy Zomato UML.png"
   ]
 }

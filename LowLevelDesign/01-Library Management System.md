@@ -513,3 +513,13 @@ public class Member extends Account{
 }
 ```
 
+### Relations b/w classes
+##### **"Is - A"**
+###### Generalization
+###### Inheritance
+##### **"Has - A"**
+###### Use Interface
+###### Association
+###### Unidirectional Association
+###### Aggregation
+###### Composition

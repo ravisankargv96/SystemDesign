@@ -2,167 +2,181 @@
 Here’s an example in Java that demonstrates all the relationships you’ve mentioned:
 #### Basics
 ##### 1. Interface
+
+An interface defines a contract that classes can implement.
+```mermaid
+classDiagram
+class Drivable {
+    <<interface>>
+    +drive() void
+}
+```
+
 ##### 2. Abstract Class
 An abstract class provides a partial implementation and can have abstract methods.
-```java
-abstract class Vehicle {
-    abstract void start();
-    void stop() {
-        System.out.println("Vehicle stopped.");
-    }
+```mermaid
+classDiagram
+class Vehicle {
+    <<abstract>>
+    +start() void
+    +stop() void
 }
 ```
 ##### 3. Class
 A class is a blueprint for creating objects.
 `Car`, `Bike`, `ElectricCar`, etc., are concrete classes.
-```java
-class Car extends Vehicle implements Drivable {
-    @Override
-    void start() {
-        System.out.println("Car started.");
-    }
-
-    @Override
-    public void drive() {
-        System.out.println("Car is being driven.");
-    }
+```mermaid
+classDiagram
+class Vehicle {
+    <<abstract>>
+    +start() void
+    +stop() void
 }
+
+class Drivable {
+    <<interface>>
+    +drive() void
+}
+
+class Car {
+    +start() void
+    +drive() void
+}
+
+Vehicle <|-- Car
+Drivable <|.. Car
 ```
 #### OOPS
 ##### 4. Generalization: A implements B
 A class implements an interface.
-```java
-class Bike implements Drivable {
-    @Override
-    public void drive() {
-        System.out.println("Bike is being driven.");
-    }
+```mermaid
+classDiagram
+class Drivable {
+    <<interface>>
+    +drive() void
 }
+
+class Vehicle {
+    <<abstract>>
+    +start() void
+    +stop() void
+}
+
+class Car {
+    +start() void
+    +drive() void
+}
+
+class Bike {
+    +drive() void
+}
+
+Vehicle <|-- Car
+Drivable <|.. Car
+Drivable <|.. Bike
 ```
 ##### 5. Inheritance: A inherits from B. A "is-a" B.
 A class inherits from another class.
-```java
-class ElectricCar extends Car {
-    void charge() {
-        System.out.println("Electric car is charging.");
-    }
+```mermaid
+classDiagram
+class Car {
+    +start() void
+    +drive() void
 }
+
+class ElectricCar {
+    +charge() void
+}
+
+Car <|-- ElectricCar
 ```
 #### Types of Associations
 ##### 6. **Use Interface: A uses interface B.**
 
 A class uses an interface as a dependency.
-```java
-class Driver {
-    private Drivable vehicle;
-
-    Driver(Drivable vehicle) {
-        this.vehicle = vehicle;
-    }
-
-    void operateVehicle() {
-        vehicle.drive();
-    }
+```mermaid
+classDiagram
+class Drivable {
+    <<interface>>
+    +drive() void
 }
+
+class Driver {
+    -vehicle : Drivable
+    +Driver(vehicle : Drivable)
+    +operateVehicle() void
+}
+Driver *-- Drivable
 ```
 ##### 7. **Association: A and B call each other.**
 
 Two classes are associated and can interact with each other.
-```java
+```mermaid
+classDiagram
 class Engine {
-    void start() {
-        System.out.println("Engine started.");
-    }
+    +start() void
 }
 
 class CarWithEngine {
-    private Engine engine;
-
-    CarWithEngine(Engine engine) {
-        this.engine = engine;
-    }
-
-    void startCar() {
-        engine.start();
-        System.out.println("Car started.");
-    }
+    -engine : Engine
+    +CarWithEngine(engine : Engine)
+    +startCar() void
 }
+
+CarWithEngine *-- Engine
 ```
 ##### 8. **Uni-directional Association: A can call B, but not vice versa.**
 One class knows about and uses another class, but not the other way around.
-```java
+```mermaid
+classDiagram
 class Radio {
-    void playMusic() {
-        System.out.println("Music is playing.");
-    }
+    +playMusic() void
 }
 
 class CarWithRadio {
-    private Radio radio;
-
-    CarWithRadio(Radio radio) {
-        this.radio = radio;
-    }
-
-    void playCarMusic() {
-        radio.playMusic();
-    }
+    -radio : Radio
+    +CarWithRadio(radio : Radio)
+    +playCarMusic() void
 }
+
+CarWithRadio *-- Radio
 ```
 ##### 9. **Aggregation: A "has-an" instance of B. B can exist without A.**
 
 A class contains another class, but the contained class can exist independently.
-```java
+```mermaid
+classDiagram
 class Wheel {
-    private String type;
-
-    Wheel(String type) {
-        this.type = type;
-    }
-
-    void rotate() {
-        System.out.println("Wheel is rotating.");
-    }
+    -type : String
+    +Wheel(type : String)
+    +rotate() void
 }
 
 class CarWithWheels {
-    private Wheel[] wheels;
-
-    CarWithWheels(Wheel[] wheels) {
-        this.wheels = wheels;
-    }
-
-    void move() {
-        for (Wheel wheel : wheels) {
-            wheel.rotate();
-        }
-        System.out.println("Car is moving.");
-    }
+    -wheels : Wheel[]
+    +CarWithWheels(wheels : Wheel[])
+    +move() void
 }
+
+CarWithWheels *-- Wheel
 ```
 ##### 10. **Composition: A "has-an" instance of B. B cannot exist without A.**
 
 A class contains another class, and the contained class cannot exist independently.
 
-```java
+```mermaid
+classDiagram
 class Engine {
-    void start() {
-        System.out.println("Engine started.");
-    }
+    +start() void
 }
 
 class CarWithComposition {
-    private Engine engine;
-
-    CarWithComposition() {
-        this.engine = new Engine(); // Engine is created when Car is created.
-    }
-
-    void startCar() {
-        engine.start();
-        System.out.println("Car started.");
-    }
+    -engine : Engine
+    +CarWithComposition()
+    +startCar() void
 }
+
+CarWithComposition *-- Engine
 ```
 #### Driver Code
 ```java
@@ -206,88 +220,53 @@ public class Main {
 #### **7. Association (Bi-directional)**
 
 In a **bi-directional Association**, both classes know about each other and can interact.
-```java
+```mermaid
+classDiagram
 class Person {
-    private String name;
-    private Address address;
-
-    Person(String name, Address address) {
-        this.name = name;
-        this.address = address;
-    }
-
-    void display() {
-        System.out.println("Person: " + name);
-        address.display();
-    }
+    -name : String
+    -address : Address
+    +Person(name : String, address : Address)
+    +display() void
+    +getName() String
 }
 
 class Address {
-    private String city;
-    private Person person;
-
-    Address(String city) {
-        this.city = city;
-    }
-
-    void setPerson(Person person) {
-        this.person = person;
-    }
-
-    void display() {
-        System.out.println("Address: " + city);
-        if (person != null) {
-            System.out.println("Person living here: " + person.getName());
-        }
-    }
+    -city : String
+    -person : Person
+    +Address(city : String)
+    +setPerson(person : Person)
+    +display() void
 }
+
+Person -- Address
 ```
+Here:
+- `Person` has a reference to `Address`.
+- `Address` also has a reference to `Person`.
+- Both classes can call methods on each other.
 #### **8. Uni-directional Association**
 
 In **Uni-directional Association**, one class knows about the other, but the other class does not know about the first one. This is a one-way relationship.
 
-```java
+```mermaid
+classDiagram
 class Radio {
-    void playMusic() {
-        System.out.println("Music is playing.");
-    }
+    +playMusic() void
 }
 
 class CarWithRadio {
-    private Radio radio;
-
-    CarWithRadio(Radio radio) {
-        this.radio = radio;
-    }
-
-    void playCarMusic() {
-        radio.playMusic();
-    }
+    -radio : Radio
+    +CarWithRadio(radio : Radio)
+    +playCarMusic() void
 }
+
+CarWithRadio --> Radio
 ```
 Here:
 - `CarWithRadio` has a reference to `Radio`.
 - `CarWithRadio` can call methods on `Radio`.
 - `Radio` does not have a reference to `CarWithRadio`.
 #### Updated Example to Show Both Relationships
-```java
-public class Main {
-    public static void main(String[] args) {
-        // Bi-directional Association
-        Address address = new Address("New York");
-        Person person = new Person("John", address);
-        address.setPerson(person); // Establishing bi-directional relationship
-        person.display();
-
-        // Uni-directional Association
-        Radio radio = new Radio();
-        CarWithRadio carWithRadio = new CarWithRadio(radio);
-        carWithRadio.playCarMusic();
-    }
-}
-```
-###### Diagram
-
 ```mermaid
 classDiagram
 class Main {
@@ -473,12 +452,4 @@ public class Operations{
 		//use Book & User instance 
 	}
 }
-```
-
-```
-To Grab entities effiectively. Find the entities that follows below pattern.
-1. Hierarchy
-	1. eg: Food -> Menu -> Restaurant -> Restaurant Manager
-2. Flow
-	1. Cart -> Checkout -> Payment 
 ```

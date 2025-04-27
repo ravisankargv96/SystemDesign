@@ -1,6 +1,4 @@
 {
   "theme": "moonstone",
-  "enabledCssSnippets": [
-    "resize-mermaid"
-  ]
+  "enabledCssSnippets": []
 }

@@ -21,7 +21,9 @@ public class DeliveryMetaData {
         return restaurantLoc;
     }
 }
+```
 
+```java
 // Class: DeliveryMgr
 public class DeliveryMgr {
     private static DeliveryMgr instance;
@@ -42,7 +44,9 @@ public class DeliveryMgr {
         // Implementation
     }
 }
+```
 
+```java
 // Class: OrderMgr
 public class OrderMgr {
     private static OrderMgr instance;
@@ -68,7 +72,9 @@ public class OrderMgr {
         return ordersMap.get(orderId);
     }
 }
+```
 
+```java
 // Class: StrategyMgr
 public class StrategyMgr {
     private static StrategyMgr instance;
@@ -90,12 +96,16 @@ public class StrategyMgr {
         return new LocBasedDeliveryPartnerMatchingStrategy();
     }
 }
+```
 
+```java
 // Interface: IDeliveryPartnerMatchingStrategy
 public interface IDeliveryPartnerMatchingStrategy {
     List<DeliveryPartner> matchDeliveryPartners(DeliveryMetaData deliveryMetaData);
 }
+```
 
+```java
 // Class: LocBasedDeliveryPartnerMatchingStrategy
 public class LocBasedDeliveryPartnerMatchingStrategy implements IDeliveryPartnerMatchingStrategy {
     @Override
@@ -104,7 +114,9 @@ public class LocBasedDeliveryPartnerMatchingStrategy implements IDeliveryPartner
         return new ArrayList<>();
     }
 }
+```
 
+```java
 // Class: DeliveryPartner
 public class DeliveryPartner {
     private String name;
@@ -117,7 +129,9 @@ public class DeliveryPartner {
         // Implementation
     }
 }
+```
 
+```java
 // Class: FoodMgr
 public class FoodMgr {
     private static FoodMgr instance;
@@ -138,7 +152,9 @@ public class FoodMgr {
         // Implementation
     }
 }
+```
 
+```java
 // Class: RestaurantMgr
 public class RestaurantMgr {
     private static RestaurantMgr instance;
@@ -164,7 +180,9 @@ public class RestaurantMgr {
         restaurantsMap.put(restaurantName, restaurant);
     }
 }
+```
 
+```java
 // Class: Restaurant
 public class Restaurant {
     private String name;
@@ -184,7 +202,9 @@ public class Restaurant {
         // Implementation
     }
 }
+```
 
+```java
 // Class: Dish
 public class Dish {
     private String name;
@@ -198,7 +218,9 @@ public class Dish {
         this.price = price;
     }
 }
+```
 
+```java
 // Class: NotificationMgr
 public class NotificationMgr {
     private static NotificationMgr instance;
@@ -220,12 +242,16 @@ public class NotificationMgr {
         sender.sendNotification(userId, msg);
     }
 }
+```
 
+```java
 // Interface: INotificationSender
 public interface INotificationSender {
     void sendNotification(String userId, String msg);
 }
+```
 
+```java
 // Class: PushNotificationSender
 public class PushNotificationSender implements INotificationSender {
     @Override
@@ -233,7 +259,9 @@ public class PushNotificationSender implements INotificationSender {
         // Implementation
     }
 }
+```
 
+```java
 // Class: SMSNotificationSender
 public class SMSNotificationSender implements INotificationSender {
     @Override
@@ -241,23 +269,60 @@ public class SMSNotificationSender implements INotificationSender {
         // Implementation
     }
 }
+```
 
+```java
 // Supporting Classes
 class Location {
     private double latitude;
     private double longitude;
 }
+```
 
+```java
 class Menu {
     private List<Dish> dishes;
 }
+```
 
+```java
 class Order {
     // Attributes and methods for Order
 }
+```
 
+```java
 class RestaurantOwner {
     // Attributes and methods for RestaurantOwner
 }
+```
 
+```
+Hierarchy
+
+DeliveryMetaData
+
+DeliveryPartnerMgr
+	DeliveryPartner	
+
+StrategyMgr
+	IDeliveryPartnerMatchingStrategy
+	LocBasedDeliveryPartnerMatchingStrategy
+
+
+
+OrderMgr
+	DeliveryMgr
+	FoodMgr
+
+RestaurantMgr
+	Restaurant
+		Dish
+		
+		IPartner
+		RestaurantOwner
+
+NotificationMgr
+	INotificationSender
+	PushNotificationSender
 ```
