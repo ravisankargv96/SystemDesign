@@ -1,1 +1,0 @@
-This is all about skeleton diagrams of LLD taken from Grokking the object oriented interview.

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SystemDesign/ReadMe.md",
+                "file": "LowLevelDesign/Codes/DesignPatterns/FactoryMethod/src/LevelTwoSolution.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ReadMe"
+              "title": "LevelTwoSolution"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.5,
-    "collapsed": true
+    "width": 322.5
   },
   "right": {
     "id": "a7f0f3705f39d2c2",
@@ -171,14 +170,30 @@
   },
   "active": "694082640ba8c4f9",
   "lastOpenFiles": [
-    "SBTopics/Getting Started _ Building a RESTful Web Service.pdf",
-    "SBTopics/Getting Started _ Building a GraphQL service.pdf",
-    "SystemDesign/04-App Servers/34-Master Load Balancer  Algorithms for Distributed Systems.md",
+    "LowLevelDesign/Codes/DesignPatterns/BuilderPattern/src/Solution/HttpAppBuilderPattern.java",
+    "LowLevelDesign/Codes/DesignPatterns/BuilderPattern/src/Problem/HttpAppTelescoping.java",
+    "LowLevelDesign/Codes/DesignPatterns/BuilderPattern/src/Problem/HttpRequestTelescoping.java",
+    "LowLevelDesign/Codes/DesignPatterns/BuilderPattern/src/Problem/HttpRequestTelescopting.java",
+    "LowLevelDesign/Codes/DesignPatterns/BuilderPattern/src/Solution",
+    "LowLevelDesign/Codes/DesignPatterns/BuilderPattern/src/Problem",
+    "LowLevelDesign/Codes/DesignPatterns/BuilderPattern/BuilderPattern.iml",
+    "LowLevelDesign/Codes/DesignPatterns/BuilderPattern/src/Main.java",
+    "LowLevelDesign/Codes/DesignPatterns/BuilderPattern/src",
+    "LowLevelDesign/Codes/DesignPatterns/BuilderPattern",
+    "LowLevelDesign/Codes/DesignPatterns/FactoryMethod/src/Problem.md",
+    "LowLevelDesign/02-Design A Parking Lot.md",
+    "LowLevelDesign/Codes/DesignPatterns/FactoryMethod/src/Problem.mmd",
+    "LowLevelDesign/Codes/DesignPatterns/FactoryMethod/src/Solution.md",
+    "LowLevelDesign/Codes/DesignPatterns/FactoryMethod/src/LevelTwoSolution.md",
+    "LowLevelDesign/Codes/DesignPatterns/FactoryMethod/src/LevelOneSolution.md",
+    "LowLevelDesign/AlgoMaster/Designing a Parking Lot System.md",
+    "LowLevelDesign/Diagrams/Mermaid/00-Basics - Diagrams.md",
+    "LowLevelDesign/03-Design Amazon.md",
+    "LowLevelDesign/01-Library Management System.md",
+    "LowLevelDesign/practice/Design a parking lot.md",
     "SystemDesign/ReadMe.md",
+    "SystemDesign/04-App Servers/34-Master Load Balancer  Algorithms for Distributed Systems.md",
     "SystemDesign/07-Network Protocols/34-Webhooks explained Again.md",
-    "SBTopics/01-Network Layer",
-    "SBTopics/03-DB Basics",
-    "SBTopics/07-Network Protocols",
     "SystemDesign/11-Miscellenious/23-Twitter Timeline Architecture - Fanout.md",
     "SystemDesign/06-Distributed Systems/47-Stream Processing.md",
     "SystemDesign/11-Miscellenious/21-How Leader Election work in Distributed Systems.md",
@@ -187,26 +202,10 @@
     "SystemDesign/03-DB Basics/02-What is Database - Storage 1.md",
     "SystemDesign/05-DB Advance/11-Caching in a Nutshell - 2.md",
     "SystemDesign/01-Network Layer/01-Client Server Architecture.md",
-    "SystemDesign/11-Miscellenious",
-    "SystemDesign/10-API Idempotency",
-    "SystemDesign/09-Request Handling",
-    "SystemDesign/08-Microsrvcs & MsgQs",
-    "SystemDesign/07-Network Protocols",
-    "SystemDesign/06-Distributed Systems",
     "SystemDesign/05-DB Advance/10-Caching in a Nutshell - 1.md",
     "SystemDesign/01-Network Layer/09-Forward Proxy and Reverse Proxy.md",
     "SystemDesign/04-App Servers/08 - How Load balancer work.md",
     "SystemDesign/06-Distributed Systems/07- CAP Theorem Explained.md",
-    "SystemDesign/05-DB Advance/06-Consistent Hashing and Sharding.md",
-    "SystemDesign/05-DB Advance/05-Hashing Simplified.md",
-    "SystemDesign/01-Network Layer/04-Latency versus Thoroughput.md",
-    "SystemDesign/06-Distributed Systems/03-Distributed Systems Explained.md",
-    "SBTopics/Readme.md",
-    "LowLevelDesign/Diagrams/Mermaid/14-Design Pub Sub System.md",
-    "SBTopics/08-Microservices&MessageQueues/Notes.md",
-    "LowLevelDesign/Diagrams/Mermaid/13-Design Tic Tac Toe.md",
-    "LowLevelDesign/Diagrams/Mermaid/12-LRUCache.md",
-    "Untitled.md",
     "LowLevelDesign/Swiggy Zomato UML.png"
   ]
 }
