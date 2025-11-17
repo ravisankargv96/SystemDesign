@@ -1,30 +1,26 @@
 # **Section 2**
 07-Introduction
 08-Understanding IP Addresses
-	- network chunk: https://www.youtube.com/watch?v=5WfiTHiU4x8
-	- Rahul wagh: https://www.youtube.com/watch?v=1hL6em8mrCo
+	- Rahul wagh: https://www.youtube.com/watch?v=1hL6em8mrCo [x]
 09-How DNS Works
-	- network chunk: https://www.youtube.com/watch?v=NiQTs9DbtW4
-	- bytebytego: https://www.youtube.com/watch?v=27r4Bzuj5NQ
+	- piyush garg (h) : https://www.youtube.com/watch?v=Ui66W7zeAbI
+	- bytebytego (c): https://www.youtube.com/watch?v=27r4Bzuj5NQ
 10-Client Server Model
 	- nickwhite: https://www.youtube.com/watch?v=h-n_gyyNly8
 	- bytemonk: https://www.youtube.com/watch?v=yioOQ4ItYuo
 11-Forward Proxy vs Reverse Proxy
-	- Raghav Dua: https://www.youtube.com/watch?v=tjfOuDGChyI
 	- bytemonk: https://www.youtube.com/watch?v=qbuMKSTv3yU
-	- byte byte go: https://www.youtube.com/watch?v=4NB0NDtOwIQ
+	- techwithnana: https://www.youtube.com/watch?v=xo5V9g9joFs
+	- techwithnana(h): https://www.youtube.com/watch?v=iInUBOVeBCc
 12-Load Balancing
-	- Stephene Maarek: https://www.youtube.com/watch?v=qpHLRc4Qt1E
-	- network chunk: https://www.youtube.com/watch?v=LlbTSfc4biw
-	- bytemonk: https://www.youtube.com/watch?v=ZcNaOuxcuyA
-	- bytemonk, LB Algorithms: https://www.youtube.com/watch?v=BWB-S0awDnA
+	- Cloud Champ (h): https://www.youtube.com/watch?v=fZuxp_pOzgI
 	- bytebytego: https://www.youtube.com/watch?v=LQuuoHTyYz8
 	- bytebytego, LB Algorithms: https://www.youtube.com/watch?v=dBmxNsS3BGE
 13-API Gateway: 
 	- bytebytego: https://www.youtube.com/watch?v=6ULyxuHKxg8
-	- gkcs: https://www.youtube.com/watch?v=RbMxB_Cyx6A
-	- rahulwagh: https://www.youtube.com/watch?v=jcibXVFiFek&list=PL7iMyoQPMtAN4xl6oWzafqJebfay7K8KP&index=30
+	- Tiny Technical Tutorials(h): https://www.youtube.com/watch?v=jgpRAiar2LQ
 14-Content Delivery Networks
+	- Tiny Technical Tutorials(h): https://www.youtube.com/watch?v=GUfAQUjA3a0
 
 Reverse Proxy Vs Load Balancing vs API Gateway: https://www.youtube.com/watch?v=RqfaTIWc3LQ
 API Gateway Vs Load Balancing: Bytemonk: https://www.youtube.com/watch?v=_ErhwTPSpws
@@ -64,22 +60,20 @@ Here are some video suggestions based on the topics you provided:
 
 ## 18. HTTP - The Backbone of the Web
 
-- **What is HTTP? How the Internet Works! #1**
-    
+- **HTTP? Crash course & Explanation:**
+	- Channel: Traversy Media
+	- **URL:** https://www.youtube.com/watch?v=iYM2zFP3Zn0
+
+- **What is HTTP? How the Internet Works! #1**    
     - **Channel:** FollowAndrew
-        
     - **URL:** [http://www.youtube.com/watch?v=wW2A5SZ3GkI](http://www.youtube.com/watch?v=wW2A5SZ3GkI)
-        
+
 - **How does the INTERNET work? | ICT #2**
-    
-    - **Channel:** Sabin Civil Engineering
-        
+    - **Channel:** Sabin Civil Engineering        
     - **URL:** [http://www.youtube.com/watch?v=x3c1ih2NJEg](http://www.youtube.com/watch?v=x3c1ih2NJEg)
         
 - **How the Internet Works in 5 Minutes**
-    
     - **Channel:** Aaron
-        
     - **URL:** [http://www.youtube.com/watch?v=7_LPdttKXPc](http://www.youtube.com/watch?v=7_LPdttKXPc)
         
 
@@ -87,47 +81,39 @@ Here are some video suggestions based on the topics you provided:
 
 ## 19. REST & RESTfulness - API Design Principles
 
+- **What is REST & RESTFul API?**
+	- Channel : Traversy Media
+	- **URL** : https://www.youtube.com/watch?v=Q-BpqyOT3a8
+	
 - **What Is REST API? Examples And How To Use It: Crash Course System Design #3**
-    
     - **Channel:** ByteByteGo
-        
     - **URL:** [http://www.youtube.com/watch?v=-mN3VyJuCjM](http://www.youtube.com/watch?v=-mN3VyJuCjM)
         
 - **Deep Dive into REST API Design and Implementation Best Practices**
-    
     - **Channel:** Software Developer Diaries
-        
     - **URL:** [http://www.youtube.com/watch?v=7nm1pYuKAhY](http://www.youtube.com/watch?v=7nm1pYuKAhY)
-        
 - **What is a REST API?**
-    
     - **Channel:** IBM Technology
-        
     - **URL:** [http://www.youtube.com/watch?v=lsMQRaeKNDk](http://www.youtube.com/watch?v=lsMQRaeKNDk)
-        
-
 ---
 
 ## 20. Real-Time Communication Protocols
 
 - **PROTOCOLS: UART - I2C - SPI - Serial communications #001**
-    
     - **Channel:** Electronoobs
-        
-    - **URL:** [http://www.youtube.com/watch?v=IyGwvGzrqp8](http://www.youtube.com/watch?v=IyGwvGzrqp8)
-        
+    - **URL:** [http://www.youtube.com/watch?v=IyGwvGzrqp8](http://www.youtube.com/watch?v=IyGwvGzrqp8)    
+
 - **Top 8 Most Popular Network Protocols Explained**
-    
     - **Channel:** ByteByteGo
-        
     - **URL:** [http://www.youtube.com/watch?v=P6SZLcGE4us](http://www.youtube.com/watch?v=P6SZLcGE4us)
-        
-- **Network Protocols Explained: Networking Basics**
     
+- **Network Protocols Explained: Networking Basics**
     - **Channel:** WhiteboardDoodles
-        
     - **URL:** [http://www.youtube.com/watch?v=1zVZ9cWFnCc](http://www.youtube.com/watch?v=1zVZ9cWFnCc)
         
+
+GraphQL(h): https://www.youtube.com/watch?v=WtkKwO1viI8
+GraphQL Architecture (h): 
 
 ---
 
@@ -153,6 +139,8 @@ Here are some video suggestions based on the topics you provided:
         
 
 I hope these suggestions are helpful! Let me know if you'd like more options for any topic.
+
+
 
 ---
 # **Section4: Architectural Patterns**
@@ -990,4 +978,3 @@ This looks like the final set! I hope these video lists have been a great resour
 
 # **Section 11: The System Design Blueprint**
 62- The 4 Step System Design Approach: From Problem Definition to Final Solution
-
