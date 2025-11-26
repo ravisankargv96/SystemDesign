@@ -3,7 +3,6 @@
 This lecture covers REST (Representational State Transfer), an architectural style that forms the foundation of most modern web services and APIs. Understanding its principles is crucial for designing scalable and efficient systems.
 
 ---
-
 ### 1. What is REST?
 
 - **Definition:** REST stands for **Representational State Transfer**. It's an **architectural style** for designing networked applications.    
@@ -65,7 +64,6 @@ Use standard HTTP verbs to perform operations on resources.
 - **GitHub API:** `GET /repos/{owner}/{repo}` (gets repo details), `POST /repos/{owner}/{repo}/issues` (creates an issue).
 
 ---
-
 ### 5. Data Formats: JSON vs. XML
 
 - **JSON (JavaScript Object Notation):**

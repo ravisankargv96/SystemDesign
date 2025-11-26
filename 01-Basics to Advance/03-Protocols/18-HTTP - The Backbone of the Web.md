@@ -3,7 +3,6 @@
 This lecture covers HTTP (Hypertext Transfer Protocol), the foundational protocol for data communication on the web. It is essential for understanding how web pages are loaded, APIs are called, and content is streamed.
 
 ---
-
 ### 1. What is HTTP?
 
 - **Stands For:** Hypertext Transfer Protocol.    
@@ -15,7 +14,6 @@ This lecture covers HTTP (Hypertext Transfer Protocol), the foundational protoco
     - **Supports Methods:** Uses various methods (like GET, POST) to define the desired action.
 
 ---
-
 ### 2. How HTTP Works: The Client-Server Model
 
 HTTP follows a request-response cycle between a client and a server.
@@ -36,7 +34,6 @@ HTTP follows a request-response cycle between a client and a server.
 3. **Body (Optional):** The actual content being returned (e.g., HTML, JSON, an image).
 
 ---
-
 ### 3. The HTTP Request-Response Cycle
 
 1. **Step 1: Client Sends Request:** The browser sends an HTTP request (method, URL, headers, optional body) to the server.    
@@ -45,7 +42,6 @@ HTTP follows a request-response cycle between a client and a server.
 4. **Step 4: Client Renders Response:** The browser receives the response. If it's HTML, it renders the page. If it's data (like JSON), the application processes it.
 
 ---
-
 ### 4. The Stateless Nature of HTTP
 
 - **What "Stateless" Means:** The server does not retain any memory or context from previous requests. Each request is treated as completely new and independent.    
@@ -56,7 +52,6 @@ HTTP follows a request-response cycle between a client and a server.
     - **Tokens (e.g., JWT):** Authentication information is stored in a token, which the client sends in the request headers to verify its identity.
 
 ---
-
 ### 5. Common HTTP Methods
 
 | **Method** | **Purpose**                                                                  | **Idempotent?***         |
@@ -70,7 +65,6 @@ HTTP follows a request-response cycle between a client and a server.
 ***Idempotent:** Means that making the same request multiple times will result in the same state as making it once. (e.g., deleting a resource twice has the same result as deleting it once).
 
 ---
-
 ### 6. HTTP Status Codes
 
 Status codes are grouped into categories:
@@ -96,7 +90,6 @@ Status codes are grouped into categories:
     - **503 Service Unavailable:** The server is overloaded or down for maintenance.
 
 ---
-
 ### 7. What About HTTPS?
 
 - **HTTPS:** Stands for **Hypertext Transfer Protocol Secure**.    

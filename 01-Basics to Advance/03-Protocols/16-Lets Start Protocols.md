@@ -1,10 +1,9 @@
-## 🗒️ Section 3: Protocols (Mastering System Design)
+## Protocols (Mastering System Design) 🗒️
 
 This section focuses on the **core communication protocols** used in modern system architecture. The goal is to understand how these protocols work, when to use them, and their real-world application in system design for web applications, APIs, and real-time communications.
 
----
 
-### 📚 Section Agenda
+### Section Agenda 📚
 
 The section will cover the following topics across six lectures:
 

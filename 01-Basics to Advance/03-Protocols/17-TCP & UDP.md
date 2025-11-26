@@ -40,7 +40,6 @@ UDP is a protocol designed for **speed and efficiency**.
 |**Overhead**|High (due to handshake, ACKs, sequencing)|Low (minimal protocol overhead)|
 
 ---
-
 ### 💡 Use Cases
 
 Choosing the right protocol involves a trade-off between **reliability and speed**.
