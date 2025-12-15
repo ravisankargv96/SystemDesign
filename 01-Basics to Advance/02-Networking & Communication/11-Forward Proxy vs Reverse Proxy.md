@@ -1,46 +1,90 @@
-## 🛡️ Forward Proxy vs. Reverse Proxy
+### **1. Forward Proxy vs. Reverse Proxy**
 
-![[Pasted image 20251115150222.png]]
+**Concept Overview**
+* **Definition:** A proxy server acts as an intermediary between a client (like your computer or phone) and another server (like a website).
+* **Role:** Instead of communicating directly, the traffic passes through this middleman.
+* **Core Functions:** Proxies are essential in modern system design for enhancing security, managing traffic, caching content to improve speed, and ensuring anonymity.
 
-A **proxy server** is an intermediary server that sits between a client and another server, helping with security, caching, traffic control, and anonymity. There are two main types of proxies, each serving a distinct purpose in the network architecture:
+![[01-What is Proxy.png]]
 
----
-### 1. Forward Proxy (Client-Side)
-
-![[Pasted image 20251115150318.png]]
-A **Forward Proxy** sits between a **client** and the **internet**. It handles **outgoing requests** on behalf of the client. The target server sees the request coming from the proxy's IP address, not the client's.
-
-|**Feature**|**Details**|
-|---|---|
-|**Position**|Between the **Client** and the **Internet**.|
-|**Who Uses It**|Clients, individual users, and organizations.|
-|**Primary Purpose**|**Anonymity**, **privacy**, content filtering, and access control.|
-|**Use Cases**|* **Anonymous browsing** (Hides user IP, e.g., VPNs, TOR).<br><br>  <br><br>* **Content Filtering** (Restricts access to certain websites).<br><br>  <br><br>* **Bypassing Geo-restrictions** (Accessing region-blocked content).<br><br>  <br><br>* **Caching** web pages to speed up browsing.|
-|**Example**|VPN, Web Proxy.|
-![[Pasted image 20251115150257.png]]
+**Two Main Types**
+While all proxies act as intermediaries, they are classified based on where they sit in the network and who they protect:
+* **Forward Proxy:** Protects the Client.
+* **Reverse Proxy:** Protects the Server.
 
 ---
-### 2. Reverse Proxy (Server-Side)
 
-![[Pasted image 20251115150359.png]]
+### **2. What is a Forward Proxy?**
 
-A **Reverse Proxy** sits between **users** and **backend servers**. It handles **incoming requests** on behalf of the server infrastructure. The client communicates only with the reverse proxy, which then routes the request to an appropriate backend server.
+**Definition & Workflow**
+* **Position:** A forward proxy sits **in front of the client** (the user).
+* **Flow:** When you try to access a website (like Google), your request goes to the forward proxy first. The proxy then forwards the request to the internet on your behalf, gets the response, and sends it back to you.
+* **Perspective:** From the internet's point of view, the request looks like it came from the proxy server, not from your specific device.
 
-| **Feature**         | **Details**                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Position**        | Between **Users/Internet** and **Backend Servers**.                                                                                                                                                                                                                                                                                                                                                                      |
-| **Who Uses It**     | Web servers, application servers, and backend infrastructure.                                                                                                                                                                                                                                                                                                                                                            |
-| **Primary Purpose** | **Load balancing**, **security**, caching, and performance optimization.                                                                                                                                                                                                                                                                                                                                                 |
-| **Use Cases**       | * **Load Balancing** (Distributes incoming traffic across multiple servers).<br><br>  <br><br>* **Security & DDoS Protection** (Hides actual backend IP addresses and filters malicious traffic).<br><br>  <br><br>* **SSL Termination** (Offloads the heavy task of encrypting/decrypting HTTPS traffic from backend servers).<br><br>  <br><br>* **Caching** content to improve response time and reduce backend load. |
-| **Example**         | Nginx, Cloudflare, AWS Application Load Balancer (ALB).                                                                                                                                                                                                                                                                                                                                                                  |
+![[02-what is forward proxy.png]]
 
-![[Pasted image 20251115150412.png]]
+**Key Use Cases & Benefits**
+* **Privacy & Anonymity:** It masks the client's real IP address. This is how VPNs work—websites see the VPN's IP, not yours.
+* **Content Filtering:** Organizations and schools use forward proxies to block access to specific websites (e.g., blocking social media on a corporate network).
+* **Bypassing Geo-Restrictions:** If content is blocked in your country, you can route your traffic through a proxy located in a different country to access it.
+* **Client-Side Caching:** It can store frequently accessed resources (like a company logo) locally, saving bandwidth for the entire local network.
+
+![[02-what is forward proxy 2.png]]
 
 ---
-### Key Takeaways for System Design
 
-- A forward proxy is client-centric, helping the client interact with the internet securely and anonymously.
-- A reverse proxy is server-centric, protecting and optimizing backend servers to ensure scalability and high availability.
-- Understanding these roles is essential for designing scalable and secure architectures.
+### **3. What is a Reverse Proxy?**
 
-The next core topic is **Load Balancers**.
+![[03-what is reverse proxy.png]]
+
+**Definition & Workflow**
+* **Position:** A reverse proxy sits **in front of the backend servers**.
+* **Flow:** When a client sends a request to a website, the request hits the reverse proxy first. The proxy then decides which specific backend server should handle that request, retrieves the data, and sends it back to the client.
+* **Perspective:** The client thinks they are talking directly to the server, but they are actually talking to the proxy. The client never sees the actual IP address of the backend server.
+
+![[04-what is reverse proxy.png]]
+
+**Key Use Cases & Benefits**
+* **Load Balancing:** This is a critical function. The proxy distributes incoming traffic across multiple servers to prevent any single server from crashing due to overload.
+* **Security & DDoS Protection:** It acts as a shield. Attackers hit the proxy, not the sensitive database or application servers behind it.
+* **SSL Termination:** Encrypting and decrypting data (HTTPS) requires high computational power. A reverse proxy can handle this "handshake," freeing up the backend servers to focus purely on processing application logic.
+* **Caching:** It stores static content (images, CSS) so the backend servers don't have to generate the same data repeatedly.
+
+---
+
+### **4. Key Differences - Forward vs. Reverse Proxy**
+
+The following table summarizes the distinctions between the two:
+
+| Feature | Forward Proxy | Reverse Proxy |
+| :--- | :--- | :--- |
+| **Position** | Sits between the **Client** and the Internet. | Sits between the Internet and the **Backend Servers**. |
+| **Primary User** | **Clients** (users, browsers, internal networks). | **Servers** (web servers, APIs, app servers). |
+| **Primary Goal** | Protects the client (Anonymity, Filtering). | Protects the server (Load Balancing, Security). |
+| **Visibility** | The server does not know who the actual client is. | The client does not know who the actual server is. |
+| **Real-World Examples** | VPNs (NordVPN), School Content Filters. | Nginx, Cloudflare, AWS Application Load Balancer. |
+
+---
+
+### **5. Interview Questions on Forward vs. Reverse Proxy**
+
+Be prepared to answer these common system design questions:
+
+* **Basic Concepts:**
+    * What is a proxy server, and why do we use it?
+    * Explain the fundamental difference between a forward and reverse proxy.
+* **Technical Deep Dive:**
+    * How does a forward proxy provide anonymity?
+    * How does a reverse proxy assist with SSL termination?
+    * In a Distributed Denial of Service (DDoS) attack, how does a reverse proxy protect the backend infrastructure?
+* **Architecture:**
+    * When designing a system like Netflix or Facebook, where would you place a reverse proxy?
+    * Why is Nginx preferred as a reverse proxy?
+
+---
+
+### **6. Wrap-Up & What’s Next**
+
+* **Summary:** Both proxies are intermediaries, but they serve opposite sides of the communication bridge. Forward proxies are the "bodyguards" for the client, while Reverse proxies are the "receptionists and bodyguards" for the server.
+* **Importance:** Knowing when to implement which proxy is crucial for designing architectures that are secure, scalable, and efficient.
+* **Next Topic:** We will dive deeper into one of the most critical functions of a reverse proxy: **Load Balancers**, exploring how they distribute traffic to keep systems reliable.
