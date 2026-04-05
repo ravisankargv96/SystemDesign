@@ -1,0 +1,50 @@
+Section-2: Networking & Communication (System Design Fundamentals)
+	https://algomaster.io/learn/system-design/ip-address
+	https://algomaster.io/learn/system-design/domain-name-system-dns
+	https://algomaster.io/learn/system-design/client-server-architecture
+	https://algomaster.io/learn/system-design/proxy-vs-reverse-proxy
+	https://algomaster.io/learn/system-design/load-balancers
+	https://algomaster.io/learn/system-design/load-balancing-algorithms
+	https://algomaster.io/learn/system-design/api-gateways
+	https://algomaster.io/learn/system-design/content-delivery-network-cdn
+	
+Section-3: Protocols (System Design Fundamentals)
+	https://algomaster.io/learn/system-design/tcp-vs-udp
+	https://algomaster.io/learn/system-design/http-https
+	https://algomaster.io/learn/system-design/rest-vs-graphql
+	
+	https://algomaster.io/learn/system-design/webrtc
+	https://algomaster.io/learn/system-design/api-architectural-styles
+	
+Section-4: Architectural Patterns (System Design Fundamentals)
+
+	Microservices Architecture: https://algomaster.io/learn/system-design/microservices-architecture
+	
+	Event-Driven Architecture: 	https://algomaster.io/learn/system-design/event-driven-architecture
+	
+Section-6: Scalability in System Design
+	https://algomaster.io/learn/system-design/scalability
+	
+Section-7: Storage - Database and Storage
+
+	https://algomaster.io/learn/system-design/sql-vs-nosql
+	
+	Sharding: https://algomaster.io/learn/system-design/sharding
+	Replication: 	https://algomaster.io/learn/system-design/replication
+	Polyglot Persistence:
+	
+	Object Storage:	https://algomaster.io/learn/system-design/object-storage
+	
+	BigData:
+	
+Section-8: 
+	https://algomaster.io/learn/system-design/what-is-caching
+	https://algomaster.io/learn/system-design/message-queues
+	https://algomaster.io/learn/system-design/concurrency-vs-parallelism
+	
+Section-9:
+	https://algomaster.io/learn/system-design/availability
+	
+Section-10:
+	https://algomaster.io/learn/system-design/authentication-authorization
+	
